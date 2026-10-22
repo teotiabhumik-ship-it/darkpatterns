@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitPulse Elite Gym &amp; Wellness Club</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #0f1115; color: #f0f2f5; line-height: 1.6; }
+    header { background: #181b20; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #282c34; }
+    header h1 { font-size: 22px; color: #ff5722; font-weight: 800; letter-spacing: 1px; }
+    nav a { color: #aaa; text-decoration: none; margin-left: 20px; font-size: 14px; }
+    nav a:hover { color: #fff; }
+    .hero { text-align: center; padding: 90px 20px; max-width: 800px; margin: 0 auto; }
+    .hero h2 { font-size: 46px; font-weight: 800; margin-bottom: 16px; color: #fff; }
+    .hero p { font-size: 18px; color: #8f96a3; margin-bottom: 32px; }
+    .trial-box { background: #1c2027; border: 2px solid #ff5722; border-radius: 12px; padding: 36px; max-width: 500px; margin: 0 auto; box-shadow: 0 10px 30px rgba(255,87,34,0.15); }
+    .price-tag { font-size: 48px; font-weight: 800; color: #ff5722; margin-bottom: 6px; }
+    .btn-claim { background: #ff5722; color: #fff; display: block; width: 100%; padding: 16px; border-radius: 6px; font-size: 18px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; margin-top: 18px; }
+    .btn-claim:hover { background: #e64a19; }
+    
+    /* DARK PATTERN: Low Contrast Hidden Renewal Terms */
+    .renewal-disclaimer {
+      font-size: 10px;
+      color: #72767d; /* Low contrast grey against dark background */
+      margin-top: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FITPULSE CLUB</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Plans &amp; Passes</a>
+      <a href="account.html">Member Portal</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Transform Your Life Today</h2>
+    <p>State-of-the-art facilities, Olympic equipment, and personal elite training.</p>
+
+    <div class="trial-box">
+      <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: #aaa; margin-bottom: 8px;">VIP 7-Day Trial Pass</div>
+      <div class="price-tag">$1.00</div>
+      <p style="color: #ccc; font-size: 14px;">Instant access to all club locations and group classes.</p>
+      
+      <a href="pricing.html" class="btn-claim">Activate VIP Pass</a>
+
+      <!-- DARK PATTERN: Low Contrast Recurring Fee Terms -->
+      <p class="renewal-disclaimer">
+        *Introductory $1 pass automatically renews into an ongoing $89.99 monthly membership fee upon completion of the 7-day trial period unless cancelled in person with club manager 48 hours prior.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>

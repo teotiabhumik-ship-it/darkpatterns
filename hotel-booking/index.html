@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Grand Hotel & Spa · Luxury Oceanfront Suites</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: #faf9f6; color: #222; line-height: 1.6; }
+    header { background: #112233; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 22px; font-weight: 600; letter-spacing: 1px; }
+    nav a { color: #e0e8f0; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    nav a:hover { color: white; }
+    .hero { background: linear-gradient(rgba(17,34,51,0.6), rgba(17,34,51,0.7)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80') center/cover; color: white; text-align: center; padding: 120px 20px; }
+    .hero h2 { font-size: 42px; font-weight: 700; margin-bottom: 12px; }
+    .hero p { font-size: 18px; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+    .btn-primary { background: #c5a059; color: white; padding: 14px 32px; border-radius: 4px; text-decoration: none; font-weight: 600; display: inline-block; font-size: 16px; transition: background 0.2s; }
+    .btn-primary:hover { background: #b08d46; }
+    
+    .features { max-width: 1100px; margin: 60px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card-body { padding: 24px; }
+    .card-body h3 { font-size: 20px; margin-bottom: 8px; color: #112233; }
+    .card-body p { font-size: 14px; color: #666; margin-bottom: 16px; }
+    .price { font-size: 22px; font-weight: 700; color: #112233; margin-bottom: 12px; }
+    
+    /* Dark Pattern: Asymmetric Cookie Consent Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #dcdcdc;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+      border-radius: 8px;
+      padding: 24px 28px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cookie-banner h4 { font-size: 16px; font-weight: 700; color: #112233; }
+    .cookie-banner p { font-size: 13px; color: #555; line-height: 1.5; }
+    .cookie-actions { display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
+    
+    /* High contrast, prominent Accept All button */
+    .btn-accept {
+      background: #00875a;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    /* Missing direct Reject button - only a faint low-contrast text link to preferences */
+    .btn-settings {
+      background: transparent;
+      color: #888888;
+      font-size: 12px;
+      text-decoration: underline;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AZURE GRAND HOTEL</h1>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="rooms.html">Suites &amp; Villas</a>
+      <a href="checkout.html">Direct Booking</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Oceanfront Serenity Awaits</h2>
+    <p>Experience world-class luxury on the Mediterranean coast. Book direct for our best guaranteed seasonal rates.</p>
+    <a href="rooms.html" class="btn-primary">View Available Rooms</a>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Deluxe Suite">
+      <div class="card-body">
+        <h3>Deluxe King Oceanfront</h3>
+        <p>Private balcony overlooking the private bay with bespoke marble ensuite.</p>
+        <div class="price">From $149 / night</div>
+        <a href="checkout.html" class="btn-primary" style="padding: 10px 20px; font-size: 14px;">Select Suite</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="Panoramic Villa">
+      <div class="card-body">
+        <h3>Panoramic Penthouse</h3>
+        <p>Wraparound terrace, private infinity dip pool, and dedicated 24-hour butler.</p>
+        <div class="price">From $299 / night</div>
+        <a href="checkout.html" class="btn-primary" style="padding: 10px 20px; font-size: 14px;">Select Suite</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK PATTERN: Missing Reject Option & Asymmetric Choice -->
+  <div class="cookie-banner" id="cookie-banner">
+    <h4>Privacy &amp; Cookie Preferences</h4>
+    <p>We use tracking cookies to personalize content, deliver tailored hotel offers, and analyze traffic. To give you the best experience, click "Accept All Cookies".</p>
+    <div class="cookie-actions">
+      <button class="btn-settings" onclick="alert('Redirecting to multi-step cookie vendor settings...')">Manage Preferences</button>
+      <button class="btn-accept" onclick="document.getElementById('cookie-banner').style.display='none'">Accept All Cookies</button>
+    </div>
+  </div>
+
+</body>
+</html>

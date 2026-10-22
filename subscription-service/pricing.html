@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Plans · FitPulse Club</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #0f1115; color: #f0f2f5; line-height: 1.6; }
+    header { background: #181b20; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #282c34; }
+    header h1 { font-size: 22px; color: #ff5722; font-weight: 800; }
+    nav a { color: #aaa; text-decoration: none; margin-left: 20px; font-size: 14px; }
+    .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px; }
+    .plan-card { background: #1c2027; border: 1px solid #2f3542; border-radius: 8px; padding: 30px; text-align: center; }
+    .plan-card.highlight { border: 2px solid #ff5722; background: #231b18; }
+    .plan-name { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .plan-price { font-size: 36px; font-weight: 800; color: #ff5722; margin: 16px 0; }
+    .btn-plan { background: #ff5722; color: #fff; padding: 12px; display: block; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 20px; }
+    
+    .consent-card { background: #181b20; border: 1px solid #2a2f3a; border-radius: 8px; padding: 24px; }
+    .checkbox-row { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: #bbb; }
+    .checkbox-row input { margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FITPULSE CLUB</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Plans &amp; Passes</a>
+      <a href="account.html">Member Portal</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 style="font-size: 32px; text-align: center; margin-bottom: 30px;">Select Your Fitness Tier</h2>
+
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-name">Standard Flex</div>
+        <p style="color: #888; font-size: 14px;">Single location club access</p>
+        <div class="plan-price">$49<span style="font-size: 16px; color: #888;">/mo</span></div>
+        <a href="account.html" class="btn-plan" style="background: #333;">Choose Standard</a>
+      </div>
+
+      <div class="plan-card highlight">
+        <span style="background: #ff5722; color: white; font-size: 11px; padding: 3px 8px; border-radius: 3px; text-transform: uppercase; font-weight: 700;">Most Popular</span>
+        <div class="plan-name" style="margin-top: 10px;">All-Access Black</div>
+        <p style="color: #888; font-size: 14px;">Nationwide clubs, sauna &amp; guest passes</p>
+        <div class="plan-price">$79<span style="font-size: 16px; color: #888;">/mo</span></div>
+        <a href="account.html" class="btn-plan">Choose Black Pass</a>
+      </div>
+    </div>
+
+    <!-- DARK PATTERN: Pre-ticked Consent for Third Party Advertising & Telemetry -->
+    <div class="consent-card">
+      <h3 style="font-size: 16px; margin-bottom: 12px; color: #fff;">Registration Preferences</h3>
+      <label class="checkbox-row">
+        <input type="checkbox" id="partner-tracking" checked>
+        <span>
+          <strong>Affiliate Partner Tracking:</strong> Send me promotional newsletters and share my biometric profile with third-party advertising partners to customize nutritional supplement offers.
+        </span>
+      </label>
+    </div>
+  </div>
+
+</body>
+</html>
