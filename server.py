@@ -16,6 +16,13 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
 
+    def translate_path(self, path):
+        if path.startswith('/darkpatterns'):
+            path = path[len('/darkpatterns'):]
+            if not path or path == '/':
+                path = '/index.html'
+        return super().translate_path(path)
+
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
